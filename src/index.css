@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+.section-mb {
+  margin-bottom: 5em;
+}
+
 table tr .custom-thead {
   font-weight: bolder;
   background-color: lightgray;
@@ -19,11 +23,19 @@ table tr .custom-thead {
 }
 
 .loading-component {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: fit-content !important;
-  /* unnecessary styling properties */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15em;
+}
+
+.loading-component > .text {
+  background-color: lightgray;
+  padding: 15px;
+}
+
+.footer-component {
+  padding: 1em 0;
+  background-color: lightgray;
   text-align: center;
 }
