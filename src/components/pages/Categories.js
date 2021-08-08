@@ -32,8 +32,8 @@ class Categories extends React.Component {
             <div className="movielist-component container">
                 <div className="row mt-3">
                     { 
-                        this.loading ? 
-                        <Loading/> :
+                        this.state.loading ? 
+                        <Loading /> :
                         this.state.categories.map(category => 
                             <CategoryItems category={category} key={category.idCategory} />
                         )

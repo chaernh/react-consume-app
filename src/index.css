@@ -23,8 +23,7 @@ table tr .custom-thead {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  
+  width: fit-content !important;
   /* unnecessary styling properties */
-  max-width: 50%;
   text-align: center;
 }

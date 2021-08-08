@@ -42,7 +42,7 @@ class CategoryDetails extends React.Component {
                 {this.state.loading ? 
                     <Loading /> :
                     <div className="row mt-3">
-                    <div className="col-md-3 my-auto">
+                    <div className="col-md-3 mb-auto">
                         <div className="text-center img-wrapper mb-3">
                             <img src={this.state.category.strCategoryThumb} alt={this.state.category.strCategory} className="img-thumbnail" />
                         </div>
