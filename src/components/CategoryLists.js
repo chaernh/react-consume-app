@@ -6,12 +6,16 @@ class CategoryLists extends React.Component {
         categories: []
     }
 
-    componentDidMount() {
+    getAll() {
         axios.get('https://themealdb.com/api/json/v1/1/categories.php').then((res) => {
             this.setState({ categories: res.data.categories })
         }).catch((e) => {
             console.log(e)
         })
+    }
+
+    componentDidMount() {
+        this.getAll()
     }
 
     render() {
