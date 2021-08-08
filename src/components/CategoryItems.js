@@ -1,10 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class CategoryItems extends React.Component {
-
-    detail(id) {
-        console.log(id)
-    }
 
     render() {
         return (
@@ -18,7 +15,7 @@ class CategoryItems extends React.Component {
                             <h5 className="card-title">{this.props.category.strCategory}</h5>
                             <p classname="card-text mb-3">{this.props.category.strCategoryDescription.substr(0,70)}</p>
                             <div className="info text-end">
-                                <button className="btn btn-success" onClick={() => this.detail(this.props.category.idCategory)}>Detail</button>
+                                <Link className="btn btn-success" to={'/detail'}>Detail</Link>
                             </div>
                         </div>
                     </div>
