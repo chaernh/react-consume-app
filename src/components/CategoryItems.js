@@ -15,7 +15,7 @@ class CategoryItems extends React.Component {
                             <h5 className="card-title">{this.props.category.strCategory}</h5>
                             <p classname="card-text mb-3">{this.props.category.strCategoryDescription.substr(0,70)}</p>
                             <div className="info text-end">
-                                <Link className="btn btn-success" to={'/detail'}>Detail</Link>
+                                <Link className="btn btn-success" to={`/${this.props.category.idCategory}`}>Detail</Link>
                             </div>
                         </div>
                     </div>
