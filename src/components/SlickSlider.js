@@ -1,6 +1,5 @@
 import React from 'react';
 import Slider from 'react-slick'
-import { Link } from 'react-router-dom';
 
 import '../../node_modules/slick-carousel/slick/slick.css'; 
 import '../../node_modules/slick-carousel/slick/slick-theme.css';
@@ -32,9 +31,7 @@ class SlickSlider extends React.Component {
                 <Slider {...settings}>
                     {datas.map(data => (
                         <div className="img-wrapper p-1">
-                            <Link to={`/${data.idCategory}`}>
-                                <img src={data.strCategoryThumb} alt={data.strCategory} className="img-thumbnail" />
-                            </Link>
+                            <img src={data.strCategoryThumb} alt={data.strCategory} className="img-thumbnail pointer-cursor" />
                         </div>
                     ))}
                 </Slider>

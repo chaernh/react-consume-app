@@ -33,7 +33,7 @@ class CategoryDetails extends React.Component {
     render() {
         return (
             <div className="category-details-component container">
-                <div className="row pt-">
+                <div className="row pt-3">
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb">
                             <li className="breadcrumb-item"><Link to={'/'}>Categories</Link></li>

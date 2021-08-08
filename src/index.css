@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+.pointer-cursor {
+  cursor: pointer !important;
+}
+
 .section-mb {
   margin-bottom: 5em;
 }
