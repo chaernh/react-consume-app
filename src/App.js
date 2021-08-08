@@ -1,5 +1,5 @@
 import Header from './components/Header'
-import MovieLists from './components/MovieLists'
+import CategoryLists from './components/CategoryLists'
 
 function App() {
     return (
@@ -8,7 +8,7 @@ function App() {
                 <Header />
             </div>
             <div className="body-content">
-                <MovieLists />
+                <CategoryLists />
             </div>
         </div>
     );
