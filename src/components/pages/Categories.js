@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 
 import CategoryItems from '../CategoryItems'
+import Loading from '../Loading'
 
 class Categories extends React.Component {
     constructor(props) {
@@ -13,10 +14,12 @@ class Categories extends React.Component {
     }
 
     getAll() {
-        axios.get('https://themealdb.com/api/json/v1/1/categories.php').then((res) => {
-            this.setState({ categories: res.data.categories })
-        }).catch((e) => {
-            console.log(e)
+        this.setState({loading: true}, () => {
+            axios.get('https://themealdb.com/api/json/v1/1/categories.php').then((res) => {
+                this.setState({ loading: false, categories: res.data.categories })
+            }).catch((e) => {
+                console.log(e)
+            })
         })
     }
 
@@ -28,9 +31,13 @@ class Categories extends React.Component {
         return (
             <div className="movielist-component container">
                 <div className="row mt-3">
-                    { this.state.categories.map(category => 
-                        <CategoryItems category={category} key={category.idCategory} />
-                    )}
+                    { 
+                        this.loading ? 
+                        <Loading/> :
+                        this.state.categories.map(category => 
+                            <CategoryItems category={category} key={category.idCategory} />
+                        )
+                    }
                 </div>
             </div>
         )

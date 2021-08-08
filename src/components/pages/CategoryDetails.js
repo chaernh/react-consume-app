@@ -1,22 +1,26 @@
 import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import Loading from '../Loading'
 
 class CategoryDetails extends React.Component {
     constructor(props){
         super(props)
         this.id = props.match.params.id
         this.state = {
-            category: {}
+            category: {},
+            loading: false
         }
     }
 
     getById(id) {
-        axios.get('https://themealdb.com/api/json/v1/1/categories.php').then((res) => {
-            let selected = res.data.categories.filter(item => item.idCategory === id)
-            this.setState({ category: selected[0] })
-        }).catch((e) => {
-            console.log(e)
+        this.setState({loading: true}, () => {
+            axios.get('https://themealdb.com/api/json/v1/1/categories.php').then((res) => {
+                let selected = res.data.categories.filter(item => item.idCategory === id)
+                this.setState({ category: selected[0], loading: false })
+            }).catch((e) => {
+                console.log(e)
+            })
         })
     }
 
@@ -35,7 +39,9 @@ class CategoryDetails extends React.Component {
                     </ol>
                 </nav>
                 </div>
-                <div className="row mt-3">
+                {this.state.loading ? 
+                    <Loading /> :
+                    <div className="row mt-3">
                     <div className="col-md-3 my-auto">
                         <div className="text-center img-wrapper mb-3">
                             <img src={this.state.category.strCategoryThumb} alt={this.state.category.strCategory} className="img-thumbnail" />
@@ -58,6 +64,7 @@ class CategoryDetails extends React.Component {
                         </div>
                     </div>
                 </div>
+                }
             </div>
         )
     }
