@@ -14,7 +14,7 @@ function App() {
                 <div id="body-content" className="section-mb">
                     <Switch>
                         <Route exact path="/" component={Categories}></Route>
-                        <Route exact path="/:id" component={CategoryDetails}></Route>
+                        <Route path="/:id" component={CategoryDetails}></Route>
                     </Switch>
                 </div>
                 <div id="footer">

@@ -8,9 +8,9 @@ class CategoryItems extends React.Component {
             <div className="col-md-4 mb-3">
                 <div className="card">
                     <div className="card-body">
-                        <div className="movie-wrapper">
-                            <div className="img-wrapper mb-3">
-                                <img src={this.props.category.strCategoryThumb} alt={this.props.category.strCategory} className="img-thumbnail" />
+                        <div className="categories-wrapper">
+                            <div className="img-wrapper text-center mb-3">
+                                <img src={this.props.category.strCategoryThumb} alt={this.props.category.strCategory} className="img-thumbnail" loading="lazy" />
                             </div>
                             <h5 className="card-title">{this.props.category.strCategory}</h5>
                             <p classname="card-text mb-3">{this.props.category.strCategoryDescription.substr(0,70)}</p>

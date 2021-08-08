@@ -29,7 +29,7 @@ class Categories extends React.Component {
 
     render() {
         return (
-            <div className="movielist-component container">
+            <div className="categories-component container">
                 <div className="row mt-3">
                     { 
                         this.state.loading ? 
