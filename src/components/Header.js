@@ -6,7 +6,8 @@ class Header extends React.Component {
             <div className="header-component">
                 <nav className="navbar navbar-light bg-light">
                     <div className="container-fluid">
-                    <Link className="navbar-brand" to={'/'}>MealDB</Link>
+                        <Link className="navbar-brand" to={'/'}>MealDB</Link>
+                        <button className="btn btn-primary">Login</button>
                     </div>
                 </nav>
             </div>

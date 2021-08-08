@@ -12,8 +12,19 @@ code {
     monospace;
 }
 
-.img-wrapper {
-  text-align: center;
+table tr .custom-thead {
+  font-weight: bolder;
+  background-color: lightgray;
+  width: 10em;
 }
 
-
+.loading-component {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  
+  /* unnecessary styling properties */
+  max-width: 50%;
+  text-align: center;
+}

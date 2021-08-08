@@ -4,9 +4,12 @@ import axios from 'axios'
 import CategoryItems from '../CategoryItems'
 
 class Categories extends React.Component {
-
-    state = {
-        categories: []
+    constructor(props) {
+        super(props)
+        this.state = {
+            categories: [],
+            loading: false
+        }
     }
 
     getAll() {

@@ -12,10 +12,8 @@ function App() {
                 </div>
                 <div className="body-content">
                     <Switch>
-                        <Route exact path="/">
-                            <Categories />
-                        </Route>
-                        <Route path="/:id" children={ <CategoryDetails /> }></Route>
+                        <Route exact path="/" component={Categories}></Route>
+                        <Route exact path="/:id" component={CategoryDetails}></Route>
 
                     </Switch>
                 </div>
