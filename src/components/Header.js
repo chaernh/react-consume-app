@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../logo.svg'
+import logo from '../logo.png'
 import { Link } from 'react-router-dom'
 class Header extends React.Component {
     render() {
@@ -9,8 +9,8 @@ class Header extends React.Component {
                     <div className="container-fluid">
                         <Link className="navbar-brand" to={'/'}>
                             <div className="d-flex align-items-center flex-row desktop">
-                                <img src={logo} alt="logo" />
-                                <span>MealDB</span>
+                                <img src={logo} alt="logo" width="40" />
+                                <span className="m-2 my-0 desktop">MealDB</span>
                             </div>
                         </Link>
                         <button className="btn btn-primary">Login</button>

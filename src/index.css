@@ -12,6 +12,14 @@ code {
     monospace;
 }
 
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
 .pointer-cursor {
   cursor: pointer !important;
 }
@@ -42,4 +50,14 @@ table tr .custom-thead {
   padding: 1em 0;
   background-color: lightgray;
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
 }
