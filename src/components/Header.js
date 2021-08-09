@@ -13,7 +13,9 @@ class Header extends React.Component {
                                 <span className="m-2 my-0 desktop">MealDB</span>
                             </div>
                         </Link>
-                        <button className="btn btn-primary">Login</button>
+                        <Link to={'/login'}>
+                            <button className="btn btn-primary">Login</button>
+                        </Link>
                     </div>
                 </nav>
             </div>
