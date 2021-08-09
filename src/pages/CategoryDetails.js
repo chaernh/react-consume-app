@@ -1,8 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import Loading from '../Loading'
-import SlickSlider from '../SlickSlider'
+import Loading from '../components/Loading'
+import SlickSlider from '../components/SlickSlider'
 
 class CategoryDetails extends React.Component {
     constructor(props){

@@ -1,8 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 
-import CategoryItems from '../CategoryItems'
-import Loading from '../Loading'
+import CategoryItems from '../components/CategoryItems'
+import Loading from '../components/Loading'
 
 class Categories extends React.Component {
     constructor(props) {

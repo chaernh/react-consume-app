@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/Header'
-import Categories from './components/pages/Categories'
-import CategoryDetails from './components/pages/CategoryDetails'
+import Categories from './pages/Categories'
+import CategoryDetails from './pages/CategoryDetails'
 import Footer from './components/Footer'
 
 function App() {
