@@ -52,6 +52,13 @@ table tr .custom-thead {
   text-align: center;
 }
 
+.card-login {
+  width: 20em !important;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+}
+
 @media only screen and (max-width: 600px) {
   .mobile {
     display: block;
