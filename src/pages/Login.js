@@ -1,5 +1,5 @@
 import React from 'react';
-import { auth, provider } from '../firebase'
+// import { auth, provider } from '../config/firebase'
 import logo from '../logo.png'
 
 class Login extends React.Component {
@@ -13,18 +13,18 @@ class Login extends React.Component {
         }
     }
 
-    loginGoogle() {
-        auth.signInWithPopup(provider).then((res) => {
-            this.setState({
-                isAuth: true,
-                user: res
-            })
-        }).catch((err) => {
-            this.setState({
-                isError: err
-            })
-        })
-    }
+    // loginGoogle() {
+    //     auth.signInWithPopup(provider).then((res) => {
+    //         this.setState({
+    //             isAuth: true,
+    //             user: res
+    //         })
+    //     }).catch((err) => {
+    //         this.setState({
+    //             isError: err
+    //         })
+    //     })
+    // }
 
     render() {
         return (

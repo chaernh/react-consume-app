@@ -23,9 +23,7 @@ class App extends React.Component {
                     <div id="body-content" className="section-mb">
                         <Switch>
                             <Route path="/login" component={Login}></Route>
-                            <Route exact path="/">
-                                <Categories />
-                            </Route>
+                            <Route exact path="/" component={Categories}></Route>
                             <Route path="/:id" component={CategoryDetails}></Route>
                         </Switch>
                     </div>
