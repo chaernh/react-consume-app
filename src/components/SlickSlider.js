@@ -31,7 +31,7 @@ class SlickSlider extends React.Component {
                 <Slider {...settings}>
                     {datas.map(data => (
                         <div className="img-wrapper p-1">
-                            <img src={data.strCategoryThumb} alt={data.strCategory} className="img-thumbnail pointer-cursor" />
+                            <img src={data.strCategoryThumb} alt={data.strCategory} key={data.idCategory} className="img-thumbnail pointer-cursor" />
                         </div>
                     ))}
                 </Slider>

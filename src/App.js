@@ -10,13 +10,7 @@ import Footer from './components/Footer'
 class App extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            auth: {
-                isError: false,
-                isAuth: false,
-                account: null
-            }
-        }
+        this.state = {}
     }
 
     render() {
@@ -24,13 +18,13 @@ class App extends React.Component {
             <Router>
                 <div className="App">
                     <div id="header" className="section-mb">
-                        <Header auth={this.state.auth} />
+                        <Header />
                     </div>
                     <div id="body-content" className="section-mb">
                         <Switch>
                             <Route path="/login" component={Login}></Route>
                             <Route exact path="/">
-                                <Categories auth={this.state.auth} />
+                                <Categories />
                             </Route>
                             <Route path="/:id" component={CategoryDetails}></Route>
                         </Switch>

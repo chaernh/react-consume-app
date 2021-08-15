@@ -1,9 +1,31 @@
 import React from 'react';
-
+import { auth, provider } from '../firebase'
 import logo from '../logo.png'
 
 class Login extends React.Component {
-    
+    constructor(props) {
+        super(props)
+        this.state = {
+            isAuth: false,
+            isError: {},
+            token: '',
+            user: {}
+        }
+    }
+
+    loginGoogle() {
+        auth.signInWithPopup(provider).then((res) => {
+            this.setState({
+                isAuth: true,
+                user: res
+            })
+        }).catch((err) => {
+            this.setState({
+                isError: err
+            })
+        })
+    }
+
     render() {
         return (
             <div className="login-component container">
@@ -24,7 +46,7 @@ class Login extends React.Component {
                                 <button className="btn btn-primary w-100">Login</button>
                                 <hr />
                                 <p>Or</p>
-                                <button className="btn btn-outline-primary">Login with Google</button>
+                                <button className="btn btn-outline-primary" onClick={this.loginGoogle}>Login with Google</button>
                             </form>
                         </div>
                     </div>

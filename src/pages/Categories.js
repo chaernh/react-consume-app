@@ -35,7 +35,7 @@ class Categories extends React.Component {
                         this.state.loading ? 
                         <Loading /> :
                         this.state.categories.map(category => 
-                            <CategoryItems category={category} key={category.idCategory} />
+                            <CategoryItems category={category} key={category.idCategory} auth={this.props.auth} />
                         )
                     }
                 </div>
