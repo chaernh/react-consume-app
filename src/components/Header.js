@@ -14,7 +14,7 @@ class Header extends React.Component {
                             </div>
                         </Link>
                         <Link to={'/login'}>
-                            <button className="btn btn-primary">Login</button>
+                            <button className="btn btn-primary">Log In</button>
                         </Link>
                     </div>
                 </nav>

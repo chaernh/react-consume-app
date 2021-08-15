@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+.mr-10px {
+  margin-right: 10px;
+}
+
 .desktop {
   display: block;
 }
